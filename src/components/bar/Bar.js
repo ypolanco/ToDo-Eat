@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import "./Bar.css";
 import heart from "./heart.svg"
 
-export default function Bar({ calories, label, type, src}) {
+export default function Bar({ calories, type, time}) {
   const [red, isRed] = useState(false);
   const [likes, likesUpdate] = useState(0);
 
   console.log(red, likes);
-  
 
   const flipped = e => { 
     e.preventDefault()
@@ -22,14 +21,13 @@ export default function Bar({ calories, label, type, src}) {
     
   }
 
-
-
   return (
-    <div>
-      <div >
+    <div className="bar-container">
+   
         <button className={type} onClick={flipped}><img src={heart} alt=""/></button>
-      </div>
-      <h5>{calories}</h5>
+      
+      <h5>Calories: {calories.toFixed(0)/10}</h5>
+      <h5>Time: {time}</h5>
       <h5>Likes {likes}</h5>
     </div>
   );

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+@media screen and (max-width: 375px) {
+
+.info-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid white;
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+.main-info{
+  display:flex;
+  justify-content: center;
+  border: 2px solid purple;
+  margin:2px;
+  font-size: 10px;
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+}

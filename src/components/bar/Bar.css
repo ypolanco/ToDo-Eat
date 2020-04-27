@@ -1,3 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+@media screen and (max-width: 375px) {
+.bar-container{
+  display:flex;
+  justify-content: space-around;
+  border: 2px solid orange;
+  color: white;
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 5px;
+  font-size: 13px;
+}
+
+
+
 .primary {
   color: red;
   background-color: red;
@@ -6,5 +24,7 @@
 .primary2 {
   color: green;
   background-color: yellow;
+}
+
 }
 

@@ -33,7 +33,7 @@ function App() {
     const response = await axios(url);
     const data = response.data.hits;
     recipesUpdate(data);
-    // console.log(data);
+    console.log(data);
   }
 
   const updateInput = e => { 
@@ -72,7 +72,7 @@ function App() {
                 calories={recipe.recipe.calories}
                 label="Like"
                 type="primary"
-                onChange={inputSearch}
+                time = {recipe.recipe.totalTime}
               ></Bar>
               <Info recipe={recipe.recipe} />
             </div>

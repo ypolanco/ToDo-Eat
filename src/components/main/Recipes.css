@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 @media screen and (max-width: 375px) {
 .bulk-container{
@@ -12,6 +12,7 @@
   display: flex;
   justify-content: center;
   color: white;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .img{
