@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 // import {} from "react-router-dom"
 import axios from "axios";
 import Recipes from "./Recipes.js";
+import Nav from "./components/navigation/Nav"
 
 function App() {
   const [recipes, recipesUpdate] = useState([]);
@@ -27,10 +28,14 @@ function App() {
 
   return (
     <div>
-      <h1>Hello</h1>
+      <div className="nav">
+        <Nav/>
+      </div>
+      <main> 
       {recipes.map((recipe) => (
-        <Recipes title={recipe.recipe.label} calories={recipe.recipe.calories}/>
+        <Recipes title={recipe.recipe.label} img={recipe.recipe.image}/>
       ))}
+      </main>  
     </div>
   );
 }
