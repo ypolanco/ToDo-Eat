@@ -5,20 +5,26 @@ import Recipes from "./components/main/Recipes.js";
 import Nav from "./components/navigation/Nav";
 import Bar from "./components/bar/Bar";
 import Info from "./components/information/Info";
+import "./App.css"
 
 function App() {
   const [recipes, recipesUpdate] = useState([]);
-  const [input, inputSearc] = useState("");
-  const [search, searchUrl] = useState("");
+  const [input, inputSearch] = useState("");
+  const [search, searchUrl] = useState("chicken");
+
+  console.log(input);
+  console.log(search)
+  
+
   const APP_ID = "483b09fc";
   const APP_KEY = "c041093c46744d0bfbbb6595e6ff606b";
 
-  const url = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=10`;
-  console.log(recipes);
+  const url = `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=10`;
+  // console.log(recipes);
 
   useEffect(() => {
-    // randomQuote();
-  }, []);
+    randomQuote();
+  }, [search]);
 
   // https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/
   //   10222351444199959/327
@@ -30,10 +36,29 @@ function App() {
     // console.log(data);
   }
 
+  const updateInput = e => { 
+    let target = e.target.value
+    let inputLower = target.toLowerCase()
+    inputSearch(inputLower)
+  }
+
+  const searchItem = e => { 
+    e.preventDefault()
+    searchUrl(input)
+  }
+
   return (
-    <>
+    <div className="container">
       <div className="nav">
-        <Nav />
+        <Nav search={search}/>
+        <form onSubmit={searchItem}>
+          <input
+            type="text"
+            value={input}
+            onChange={updateInput}
+          />
+          <button type="submit">Search</button>
+        </form>
       </div>
       <main>
         <div>
@@ -47,13 +72,14 @@ function App() {
                 calories={recipe.recipe.calories}
                 label="Like"
                 type="primary"
+                onChange={inputSearch}
               ></Bar>
               <Info recipe={recipe.recipe} />
             </div>
           ))}
         </div>
       </main>
-    </>
+    </div>
   );
 }
 

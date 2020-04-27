@@ -1,0 +1,30 @@
+
+
+@media screen and (max-width: 375px) {
+.bulk-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid red;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.img{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  height: 200px;
+  width: 70%;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid yellow;
+  
+}
+
+}
