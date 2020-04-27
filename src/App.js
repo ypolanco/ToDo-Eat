@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
 // import {} from "react-router-dom"
 import axios from "axios";
-import Recipes from "./Recipes.js";
-import Nav from "./components/navigation/Nav"
+import Recipes from "./components/main/Recipes.js";
+import Nav from "./components/navigation/Nav";
+import Bar from "./components/bar/Bar";
+import Info from "./components/information/Info";
 
 function App() {
   const [recipes, recipesUpdate] = useState([]);
+  const [input, inputSearc] = useState("");
+  const [search, searchUrl] = useState("");
   const APP_ID = "483b09fc";
   const APP_KEY = "c041093c46744d0bfbbb6595e6ff606b";
 
@@ -13,7 +17,7 @@ function App() {
   console.log(recipes);
 
   useEffect(() => {
-    randomQuote();
+    // randomQuote();
   }, []);
 
   // https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/
@@ -27,16 +31,29 @@ function App() {
   }
 
   return (
-    <div>
+    <>
       <div className="nav">
-        <Nav/>
+        <Nav />
       </div>
-      <main> 
-      {recipes.map((recipe) => (
-        <Recipes title={recipe.recipe.label} img={recipe.recipe.image}/>
-      ))}
-      </main>  
-    </div>
+      <main>
+        <div>
+          {recipes.map((recipe) => (
+            <div>
+              <Recipes
+                title={recipe.recipe.label}
+                img={recipe.recipe.image}
+              ></Recipes>
+              <Bar
+                calories={recipe.recipe.calories}
+                label="Like"
+                type="primary"
+              ></Bar>
+              <Info recipe={recipe.recipe} />
+            </div>
+          ))}
+        </div>
+      </main>
+    </>
   );
 }
 
