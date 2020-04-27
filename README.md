@@ -1,68 +1,173 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Project Planning
 
-In the project directory, you can run:
+> The Project Planning section should be completed for your project pitch with instructors.
+>
+> To ensure correct Markdown, I recommend cloning this wiki and copy/pasting the raw template code.
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Overview
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+_**ToDO: EAT** ToDo:Eat, is a Recipe book that mimics the usability of several major apps that I love and admire. 
+Users are going to be able to page between recipes and like them and if they enjoyed the recipe. Additionally the 
+applicatation will allow users to see how often the the recipe has been liked. 
 
-### `npm test`
+### Wireframes
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Mobile]('src/wire/Screen Shot 2020-04-26 at 6.23.45 PM.png')
+[Ipad]('src/wire/Screen Shot 2020-04-26 at 6.23.54 PM.png')
+[Desktop]('src/wire/Screen Shot 2020-04-26 at 6.24.01 PM.png')
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### MVP
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**ToDo:Eat** application will allow users to navigate via the Edamam Api by selecting a 
+catagory and flippign through the recipe book. Each Catagory should contain 25 recipe's tht the user can like. The recipe will include, colorie count, image, instructions, and list of items to obtain. 5 Catagories to select from including vegiterian, it must be nice.
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Goals
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- _Pull in 25 Recipies with Api on Catergory_
+- _Make 6 components_
+      _Navigation_
+      _Title and Image_
+      _Like Bar, with updating count state_
+      _Ingredients_
+      _Instructions_
+      _Each Catagory_
+- _Have a Beutiful, user friendly application_
+- _Have my like heart work when clicked on_
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br>
 
-## Learn More
+#### Libraries
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> Use this section to list all supporting libraries and their role in the project.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+|     Library      | Description                                |
+| :--------------: | :----------------------------------------- |
+|   React Router   | _Help me navigate within the application_  |
+|   React Links    | _Navigate between linkes_                  |
+|   Axios          | _imort Data_                               |
+|   Jest           | _Heart, Arrow, Logo_                       |
 
-### Code Splitting
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+#### Data
 
-### Analyzing the Bundle Size
+> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+|    API     | Quality Docs? | Website       | Sample Query                            |
+| :--------: | :-----------: | :------------ | :-------------------------------------- |
+| Edamam |      yes      | _api.edamam.com_ | _search?q=chicken_ |
 
-### Making a Progressive Web App
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+#### Component Hierarchy
 
-### Advanced Configuration
+> Use this section to define your React components and the data architecture of your app.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+```
+src
+|__ components/
+      |__ Nav 
+        |_Logo
+        |_App name
+        |_Link
+        |_ Nav.css
+      |__ info
+        |_Title 
+        |_Img
+        |_Info.css
+      |__ Bar
+        |_ Heart
+        |_ Calories
+        |_ Likes
+        |_ Bar.css
+      |__ Ingredients
+        |_Title
+        |_Ingredents from API
+        |_Ingredients.css
+      |__ Prep
+        |_ Prep feed from API
+        |_ Prep.css
+|__ App.Js
+      
+```
 
-### Deployment
+<br>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+#### Component Breakdown
 
-### `npm run build` fails to minify
+> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+|  Component   |    Type    | state | props | Description                                                      |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|   Navigation | functional |   n   |   n   | _The header will contain the navigation and logo._               |
+|    Title     | functional |   n   |   y   | _Will contain information for the title and img of the product_       |
+|     Bar      | functional |   y   |   y   | _This will include calories and update state_      |
+| Ingredients  | functional |   n   |   y   | _Will pull all valuable ingredient info._                 |
+| Preperation  | functional |   n   |   y   | _Prep instructions._ |
+|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+
+<br>
+
+#### Component Estimates
+
+> Use this section to estimate the time necessary to build out each of the components you've described above. 
+>
+> Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evalute possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
+
+| Task                | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| Add Nav Bar         |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
+| Title/Img           |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
+| Bar                 |    H     |     6 hrs      |     0 hrs     |    0 hrs    |
+| Bar functionality   |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
+| Ingredients         |    H     |     2 hrs      |     0 hrs     |    0 hrs    |
+| Prep                |    H     |     2 hrs      |     0 hrs     |    0 hrs    |
+| Footer              |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
+| WireFrame           |    H     |     4 hrs      |     0 hrs     |    0 hrs    |
+| Design              |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
+| Css Pagination      |    M     |     4 hrs      |     0 hrs     |    0 hrs    |
+| Debugging           |    M     |     7 hrs      |     0 hrs     |    0 hrs    |
+
+| TOTAL               |          |     40 hrs      |     0 hrs     |     TBD     |
+
+<br>
+
+#### Helper Functions
+
+> Use this section to document all helper functions– generic functions that can be reused in other applications.
+
+|  Function  | Description                                |
+| :--------: | :----------------------------------------- |
+| Capitalize | _Lorem ipsum dolor sit amet, consectetur._ |
+
+<br>
+
+### Post-MVP
+
+- _Add Search functionaity._
+- _Add comment functionality._
+- _Add Share functionality._
+- _Ingredient input Functionality._
+
+<br>
+
+***
+
+## Project Delivery
+
+### Code Showcase
+
+> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
+
+### Code Issues & Resolutions
+
+> Use this section to list of all major issues encountered and their resolution, if you'd like.

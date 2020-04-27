@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+// import {} from "react-router-dom"
+import axios from "axios";
+import Recipes from "./Recipes.js";
 
 function App() {
+  const [recipes, recipesUpdate] = useState([]);
+  const APP_ID = "483b09fc";
+  const APP_KEY = "c041093c46744d0bfbbb6595e6ff606b";
+
+  const url = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=10`;
+  console.log(recipes);
+
+  useEffect(() => {
+    randomQuote();
+  }, []);
+
+  // https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/
+  //   10222351444199959/327
+
+  async function randomQuote() {
+    const response = await axios(url);
+    const data = response.data.hits;
+    recipesUpdate(data);
+    // console.log(data);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Hello</h1>
+      {recipes.map((recipe) => (
+        <Recipes title={recipe.recipe.label} calories={recipe.recipe.calories}/>
+      ))}
     </div>
   );
 }
