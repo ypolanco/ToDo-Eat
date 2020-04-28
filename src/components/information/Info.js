@@ -3,7 +3,7 @@ import "./Info.css"
 
 
 export default function info({ recipe }) {
-  console.log('here here',recipe);
+  // console.log('here here',recipe);
   
   return(
   <div className="info-container">
