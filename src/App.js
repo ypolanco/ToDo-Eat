@@ -12,7 +12,7 @@ import Pork from "./components/fav/Pork";
 import Fish from "./components/fav/Fish";
 import Veg from "./components/fav/Veg";
 
-function App() {
+function App(props) {
   const [recipes, recipesUpdate] = useState([]);
   const [input, inputSearch] = useState("");
   const [search, searchUrl] = useState("chicken");
@@ -30,9 +30,6 @@ function App() {
   useEffect(() => {
     // randomQuote();
   }, [search]);
-
-  // https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/
-  //   10222351444199959/327
 
   async function randomQuote() {
     const response = await axios(url);
@@ -68,7 +65,7 @@ function App() {
           <button type="submit" label="Search">Search</button>
         </form>
         <Route exact path="/Chicken/">
-            <Chicken />
+          <Chicken/>
         </Route>
         <Route exact path="/Beef/">
             <Beef/>
@@ -82,7 +79,8 @@ function App() {
         <Route exact path="/Veg/">
             <Veg/>
         </Route>
-      </div>
+     
+      <Route exact path="/">
       <main className="wrapper">
         <div className="within-wrapper">
           {recipes.map((recipe) => (
@@ -100,8 +98,10 @@ function App() {
               <Info recipe={recipe.recipe} />
             </div>
           ))}
-        </div>
+          </div>
       </main>
+      </Route>
+      </div>
     </div>
   );
 }

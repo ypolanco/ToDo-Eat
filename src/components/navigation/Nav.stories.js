@@ -1,38 +1,17 @@
 import React from 'react';
-import { Button } from '@storybook/react/demo';
 import { storiesOf } from '@storybook/react';
-// import Nav from "./Nav"
+// import MyLink from "./MyLink"
+import Nav from "./Nav"
 
 
 storiesOf("Links", module)
-  .add('Chicken Link', () =><Button className="chicken" label="chick" type="chick">
-    <span role="img" aria-label="so cool">
-    🐔
-    </span>
-  </Button>
+  .add('Chicken Link', () =><Nav className="chicken" label="chick" type="chick" />
 )
-.add('Beef Link', () => <Button>
-    <span role="img" aria-label="so cool" className="beef">
-    🐄
-    </span>
-  </Button>
+.add('Beef Link', () => <Nav className="cow" label="cow" type="cow"/>
 )
-.add('Pork Link', () => <Button>
-<span role="img" aria-label="so cool" className="pork">
-🐷
-</span>
-</Button>
+.add('Pork Link', () => <Nav className="pork" label="pork" type="pork"/>
 )
-.add('Fish Link', () => <Button>
-    <span role="img" aria-label="so cool" className="fish">
-      🐟
-    </span>
-  </Button>
+.add('Fish Link', () => <Nav className="fish" label="fish" type="fish"/>
 )
-.add('Vegiterian Link', () => <Button>
-    <span role="img" aria-label="so cool" className="veg">
-      🥬
-    </span>
-  </Button>
+.add('Veg Link', () => <Nav className="veg" label="veg" type="veg"/>
 )
-
