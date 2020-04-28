@@ -7,6 +7,10 @@ import Bar from "./components/bar/Bar";
 import Info from "./components/information/Info";
 import "./App.css"
 import Chicken from "./components/fav/Chicken";
+import Beef from "./components/fav/Beef";
+import Pork from "./components/fav/Pork";
+import Fish from "./components/fav/Fish";
+import Veg from "./components/fav/Veg";
 
 function App() {
   const [recipes, recipesUpdate] = useState([]);
@@ -24,7 +28,7 @@ function App() {
   // console.log(recipes);
 
   useEffect(() => {
-    randomQuote();
+    // randomQuote();
   }, [search]);
 
   // https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/
@@ -65,6 +69,18 @@ function App() {
         </form>
         <Route exact path="/Chicken/">
             <Chicken />
+        </Route>
+        <Route exact path="/Beef/">
+            <Beef/>
+        </Route>
+        <Route exact path="/Pork/">
+            <Pork/>
+        </Route>
+        <Route exact path="/Fish/">
+            <Fish/>
+        </Route>
+        <Route exact path="/Veg/">
+            <Veg/>
         </Route>
       </div>
       <main className="wrapper">

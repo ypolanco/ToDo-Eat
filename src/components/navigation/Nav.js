@@ -8,7 +8,9 @@ export default function Nav({ search, type, label }) {
   return (
     <div>
       <nav className="navigation">
-        <img src={symbol} alt="" className="logo" />
+        <Link to="/">
+          <img src={symbol} alt="" className="logo" />
+        </Link>
         <h1 className="app-name">ToDo: {search}</h1>
         <ol className="menu">
           <Link to="/Chicken/">
