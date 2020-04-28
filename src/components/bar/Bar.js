@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Bar.css";
 import heart from "./heart.svg"
 
-export default function Bar({ calories, type, time}) {
+export default function Bar({ calories, time}) {
   const [red, isRed] = useState(false);
   const [likes, likesUpdate] = useState(0);
 
@@ -24,9 +24,10 @@ export default function Bar({ calories, type, time}) {
   return (
     <div className="bar-container">
    
-        <button className={type} onClick={flipped}><img src={heart} alt=""/></button>
+        <button className={red ? "primary" : null} onClick={flipped}><img src={heart} alt="" type="primary"/></button>
       
-      <h5>Calories: {calories.toFixed(0)/10}</h5>
+      {/* <h5>Calories: {calories.toFixed(0)}</h5> */}
+      <h5>Calories: {calories}</h5>
       <h5>Time: {time}</h5>
       <h5>Likes {likes}</h5>
     </div>

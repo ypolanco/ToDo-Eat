@@ -8,7 +8,7 @@ export default function info({ recipe }) {
   return(
   <div className="info-container">
     {recipe.ingredients.map((info) => (
-    <div>
+      <div>
       <p className="main-info">{info.text}</p>
     </div>
    ))}

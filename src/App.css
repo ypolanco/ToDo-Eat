@@ -2,3 +2,19 @@
   background-color: black;
   /* border: 2px solid green; */
 }
+
+.within-wrapper{
+  /* background-color: rgba(211,211,211,0.1); */
+  width: 80%;
+  margin-left:auto;
+  margin-right:auto;  
+
+}
+
+.wrapper{
+ 
+}
+
+.submit {
+  background-color: red;
+}

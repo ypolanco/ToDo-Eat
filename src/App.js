@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-// import {} from "react-router-dom"
+import { Route } from "react-router-dom";
 import axios from "axios";
 import Recipes from "./components/main/Recipes.js";
 import Nav from "./components/navigation/Nav";
 import Bar from "./components/bar/Bar";
 import Info from "./components/information/Info";
 import "./App.css"
+import Chicken from "./components/fav/Chicken";
 
 function App() {
   const [recipes, recipesUpdate] = useState([]);
@@ -40,16 +41,19 @@ function App() {
     let target = e.target.value
     let inputLower = target.toLowerCase()
     inputSearch(inputLower)
+    
   }
 
   const searchItem = e => { 
     e.preventDefault()
     searchUrl(input)
+    inputSearch("")
   }
 
   return (
     <div className="container">
       <div className="nav">
+
         <Nav search={search}/>
         <form onSubmit={searchItem}>
           <input
@@ -57,11 +61,14 @@ function App() {
             value={input}
             onChange={updateInput}
           />
-          <button type="submit">Search</button>
+          <button type="submit" label="Search">Search</button>
         </form>
+        <Route exact path="/Chicken/">
+            <Chicken />
+        </Route>
       </div>
-      <main>
-        <div>
+      <main className="wrapper">
+        <div className="within-wrapper">
           {recipes.map((recipe) => (
             <div>
               <Recipes
@@ -71,8 +78,8 @@ function App() {
               <Bar
                 calories={recipe.recipe.calories}
                 label="Like"
+                time={recipe.recipe.totalTime}
                 type="primary"
-                time = {recipe.recipe.totalTime}
               ></Bar>
               <Info recipe={recipe.recipe} />
             </div>

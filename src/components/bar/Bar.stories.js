@@ -7,9 +7,7 @@ import heart from "./heart.svg"
 
 
 storiesOf('Bar', module)
-  .add('Primary', () => <Bar label="Like" type="primary"/>)
-
-storiesOf('Bar Input', module)
+  .add('Primary', () => <Bar label="Like" src="heart"/>)
   .add('Primary Input', () => <Bar Type = "text" placeholder="Email" label="Email" type="input"/>)
 
   

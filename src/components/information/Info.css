@@ -4,20 +4,22 @@
   display:flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid white;
+  /* border: 2px solid white; */
   color: white;
   font-family: 'IBM Plex Mono', monospace;
+
 }
 
 .main-info{
   display:flex;
   justify-content: center;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   margin:2px;
   font-size: 20px;
   width: 80%;
   margin-left:auto;
   margin-right:auto;
+
 
 }
 
@@ -27,7 +29,7 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     color: white;
     font-family: 'IBM Plex Mono', monospace;
   }
@@ -35,12 +37,13 @@
   .main-info{
     display:flex;
     justify-content: center;
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     margin:2px;
     font-size: 20px;
     width: 80%;
     margin-left:auto;
     margin-right:auto;
+    
   
   }
   

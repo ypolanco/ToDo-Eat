@@ -12,7 +12,8 @@
   justify-content: center;
   color: white;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 50px;
+  font-size: 30px;
+  
 }
 
 .img{
@@ -20,11 +21,11 @@
   justify-content: center;
   padding: 10px;
   height: 450px;
-  width: 70%;
-  border-radius: 10px;
+  width: 50%;
   margin-left: auto;
   margin-right: auto;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
+
   
 }
 
