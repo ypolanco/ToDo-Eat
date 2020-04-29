@@ -51,6 +51,8 @@ padding-left: 5px;
   padding:10px;
   font-size:30px;
 }
+
+/* media query for IPAD Pro */
 @media screen and (max-width: 1024px) {
   .navigation{
     display: flex;
@@ -61,7 +63,7 @@ padding-left: 5px;
   
   .app-name{
     display: flex; 
-    width: 100%;
+    width: 60%;
     font-size: 40px;
     /* border: 2px solid red; */
   }

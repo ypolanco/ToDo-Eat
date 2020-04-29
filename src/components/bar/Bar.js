@@ -24,10 +24,10 @@ export default function Bar({ calories, time}) {
   return (
     <div className="bar-container">
    
-        <button className={red ? "primary" : null} onClick={flipped}><img src={heart} alt="" type="primary"/></button>
+        <button onClick={flipped}><img src={heart} alt="" type="primary" className={red ? "primary" : "primary2"}/></button>
       
       {/* <h5>Calories: {calories.toFixed(0)}</h5> */}
-      <h5>Calories: {calories}</h5>
+      <h5>Calories: {calories.toFixed(0)}</h5>
       <h5>Time: {time}</h5>
       <h5>Likes {likes}</h5>
     </div>

@@ -67,10 +67,18 @@
   border: 2px solid purple;
   margin:2px;
   font-size: 10px;
-  width: 80%;
+  width: 90%;
   margin-left:auto;
   margin-right:auto;
 
 }
+
+.ingredients{
+  display: flex; 
+  justify-content: center;
+  margin-top: 5px; 
+  margin-bottom: 5px;
+}
+
 
 }
