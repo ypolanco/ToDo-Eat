@@ -1,7 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');.container {
-  background-color: black;
-  /* border: 2px solid green; */
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 .within-wrapper{
   /* background-color: rgba(211,211,211,0.1); */
@@ -32,6 +29,8 @@
   margin-left: auto;
   margin-right:auto;
   border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .story-input::placeholder{
@@ -47,5 +46,57 @@
   background-color: #BEA23C;
   color: black;
   border-radius: 5px;
+
+}
+
+/* iphone 10 max display */
+@media screen and (max-width: 375px) {
+  .container {
+    background-color: black;
+    /* border: 2px solid green; */
+  }
+  
+  .within-wrapper{
+    /* background-color: rgba(211,211,211,0.1); */
+    width: 80%;
+    margin-left:auto;
+    margin-right:auto;  
+  
+  }
+  
+  .form{
+    display:flex;
+    flex-direction: column;
+  }
+
+  .story-input{
+    display:flex;
+    justify-content: center;
+    width: 50%;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    margin-left: auto;
+    margin-right:auto;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .story-input::placeholder{
+    text-align: center;
+  }
+  
+  .story-submit{
+    width:35%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    background-color: #BEA23C;
+    color: black;
+    border-radius: 5px;
+  
+
+}
 
 }

@@ -14,7 +14,7 @@ export default function Nav(props) {
         <Link to="/">
           <img src={symbol} alt="" className="logo" />
         </Link>
-        <h1 className="app-name">ToDo: {props.search}</h1>
+        <h1 className="app-name">ToDo:Eat</h1>
         <ol className="menu">
           <Link to="/Chicken/">
               <span role="img" aria-label="so cool" className="chick">

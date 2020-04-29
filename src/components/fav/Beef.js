@@ -12,7 +12,7 @@ export default function Beef() {
   // console.log(recipes);
 
   useEffect(() => {
-    // randomQuote();
+    // randomQuote(); 
   }, []);
 
   async function randomQuote() {
@@ -26,6 +26,7 @@ export default function Beef() {
 
   return (
     <div>
+      <h4 className="favorite"> Meals to Inspire</h4>
       {recipes.map((recipe) => (
         <div className="animal-container">
           <p className="animal-label">{recipe.recipe.label}</p>

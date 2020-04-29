@@ -26,6 +26,7 @@ export default function Pork() {
 
   return (
     <div>
+      <h4 className="favorite"> Meals to Inspire</h4>
       {recipes.map((recipe) => (
         <div className="animal-container">
           <p className="animal-label">{recipe.recipe.label}</p>

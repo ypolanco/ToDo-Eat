@@ -26,8 +26,9 @@ export default function Chicken() {
 
   return (
     <div>
+      <h4 className="favorite"> Meals to Inspire</h4>
       {recipes.map((recipe) => (
-        <div className="chicken-container">
+        <div className="animal-container">
           <p className="animal-label">{recipe.recipe.label}</p>
           <img src={recipe.recipe.image} alt="" className="animal-img" />
           <div className="bottom-container">

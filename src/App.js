@@ -23,11 +23,11 @@ function App(props) {
   const APP_ID = "483b09fc";
   const APP_KEY = "c041093c46744d0bfbbb6595e6ff606b";
 
-  const url = `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=10`;
+  const url = `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=30`;
   // console.log(recipes);
 
   useEffect(() => {
-    // randomQuote();
+    randomQuote();
   }, [search]);
 
   async function randomQuote() {
@@ -52,24 +52,9 @@ function App(props) {
   return (
     <div className="container">
       <div className="nav">
-      <Route exact path="/Chicken/">
-          <Chicken />
-        </Route>
-        <Route exact path="/Beef/">
-          <Beef />
-        </Route>
-        <Route exact path="/Pork/">
-          <Pork />
-        </Route>
-        <Route exact path="/Fish/">
-          <Fish />
-        </Route>
-        <Route exact path="/Veg/">
-          <Veg />
-        </Route>
-          <Nav search={search} />
+      <Nav search={search}/>
         <Route exact path="/">
-        <form onSubmit={searchItem} className="form">
+          <form onSubmit={searchItem} className="form">
             <input
               type="text"
               value={input}
@@ -101,6 +86,23 @@ function App(props) {
             </div>
           </main>
         </Route>
+
+        <Route exact path="/Chicken/">
+          <Chicken />
+        </Route>
+        <Route exact path="/Beef/">
+          <Beef />
+        </Route>
+        <Route exact path="/Pork/">
+          <Pork />
+        </Route>
+        <Route exact path="/Fish/">
+          <Fish />
+        </Route>
+        <Route exact path="/Veg/">
+          <Veg />
+        </Route>
+        
       </div>
     </div>
   );
