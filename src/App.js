@@ -27,7 +27,7 @@ function App(props) {
   // console.log(recipes);
 
   useEffect(() => {
-    randomQuote();
+    // randomQuote();
   }, [search]);
 
   async function randomQuote() {
