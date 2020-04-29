@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-// import MyLink from "./MyLink"
+import symbol from "./symbol.png"
 import Nav from "./Nav"
 
 
@@ -14,4 +14,13 @@ storiesOf("Links", module)
 .add('Fish Link', () => <Nav className="fish" label="fish" type="fish"/>
 )
 .add('Veg Link', () => <Nav className="veg" label="veg" type="veg"/>
+)
+
+
+storiesOf("Logo", module)
+  .add('Logo Link', () =><Nav className="logo" label="logo" src={symbol} />
+)
+
+storiesOf("Name", module)
+  .add('Logo Link', () =><Nav className="app-name" label="app-name"/>
 )

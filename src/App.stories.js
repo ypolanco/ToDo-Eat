@@ -5,4 +5,6 @@ import App from "./App"
 
 storiesOf('Search Input', module)
   .add('Primary Input', () => <App Type="text" placeholder="Food Name" label="Food" type="input" className="story-input" />)
-  .add('Button', () => <App label="Search" type="submit" className="story-submit"/>)
+  .add('Button', () => <App label="Search" type="submit" className="story-submit" />)
+  
+
