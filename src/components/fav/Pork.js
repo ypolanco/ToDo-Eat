@@ -15,9 +15,6 @@ export default function Pork() {
     // randomQuote();
   }, []);
 
-  // https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/
-  //   10222351444199959/327
-
   async function randomQuote() {
     const response = await axios(url);
     const data = response.data.hits;

@@ -5,7 +5,7 @@ import Recipes from "./components/main/Recipes.js";
 import Nav from "./components/navigation/Nav";
 import Bar from "./components/bar/Bar";
 import Info from "./components/information/Info";
-import "./App.css"
+import "./App.css";
 import Chicken from "./components/fav/Chicken";
 import Beef from "./components/fav/Beef";
 import Pork from "./components/fav/Pork";
@@ -15,11 +15,10 @@ import Veg from "./components/fav/Veg";
 function App(props) {
   const [recipes, recipesUpdate] = useState([]);
   const [input, inputSearch] = useState("");
-  const [search, searchUrl] = useState("chicken");
+  const [search, searchUrl] = useState("pizza");
 
   console.log(input);
-  console.log(search)
-  
+  console.log(search);
 
   const APP_ID = "483b09fc";
   const APP_KEY = "c041093c46744d0bfbbb6595e6ff606b";
@@ -38,69 +37,70 @@ function App(props) {
     console.log(data);
   }
 
-  const updateInput = e => { 
-    let target = e.target.value
-    let inputLower = target.toLowerCase()
-    inputSearch(inputLower)
-    
-  }
+  const updateInput = (e) => {
+    let target = e.target.value;
+    let inputLower = target.toLowerCase();
+    inputSearch(inputLower);
+  };
 
-  const searchItem = e => { 
-    e.preventDefault()
-    searchUrl(input)
-    inputSearch("")
-  }
+  const searchItem = (e) => {
+    e.preventDefault();
+    searchUrl(input);
+    inputSearch("");
+  };
 
   return (
     <div className="container">
       <div className="nav">
-
-        <Nav search={search}/>
-        <form onSubmit={searchItem}>
-          <input
-            type="text"
-            value={input}
-            onChange={updateInput}
-          />
-          <button type="submit" label="Search">Search</button>
-        </form>
-        <Route exact path="/Chicken/">
-          <Chicken/>
+      <Route exact path="/Chicken/">
+          <Chicken />
         </Route>
         <Route exact path="/Beef/">
-            <Beef/>
+          <Beef />
         </Route>
         <Route exact path="/Pork/">
-            <Pork/>
+          <Pork />
         </Route>
         <Route exact path="/Fish/">
-            <Fish/>
+          <Fish />
         </Route>
         <Route exact path="/Veg/">
-            <Veg/>
+          <Veg />
         </Route>
-     
-      <Route exact path="/">
-      <main className="wrapper">
-        <div className="within-wrapper">
-          {recipes.map((recipe) => (
-            <div>
-              <Recipes
-                title={recipe.recipe.label}
-                img={recipe.recipe.image}
-              ></Recipes>
-              <Bar
-                calories={recipe.recipe.calories}
-                label="Like"
-                time={recipe.recipe.totalTime}
-                type="primary"
-              ></Bar>
-              <Info recipe={recipe.recipe} />
+          <Nav search={search} />
+        <Route exact path="/">
+        <form onSubmit={searchItem} className="form">
+            <input
+              type="text"
+              value={input}
+              onChange={updateInput}
+              className="story-input"
+              placeholder="Enter Your Food Item"
+            />
+            <button type="submit" label="Search" className="story-submit">
+              Search
+            </button>
+          </form>
+          <main className="wrapper">
+            <div className="within-wrapper">
+              {recipes.map((recipe) => (
+                <div>
+                  <Recipes
+                    title={recipe.recipe.label}
+                    img={recipe.recipe.image}
+                  ></Recipes>
+                  <Bar
+                    calories={recipe.recipe.calories}
+                    label="Like"
+                    time={recipe.recipe.totalTime}
+                    type="primary"
+                  ></Bar>
+                  <Info recipe={recipe.recipe} />
+                </div>
+              ))}
             </div>
-          ))}
-          </div>
-      </main>
-      </Route>
+          </main>
+        </Route>
       </div>
     </div>
   );
