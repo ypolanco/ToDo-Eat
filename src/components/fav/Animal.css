@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
-.chicken-container {
+.animal-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

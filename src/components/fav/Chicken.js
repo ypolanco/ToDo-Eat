@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Chicken.css";
+import "./Animal.css";
 
 export default function Chicken() {
   const [recipes, recipesUpdate] = useState([]);
@@ -12,7 +12,7 @@ export default function Chicken() {
   // console.log(recipes);
 
   useEffect(() => {
-    randomQuote();
+    // randomQuote();
   }, []);
 
   // https://cors-anywhere.herokuapp.com/https://superheroapi.com/api/
