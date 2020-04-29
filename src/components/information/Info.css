@@ -70,7 +70,7 @@ margin-top: 20px;
   display:flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid white;
+
   color: white;
   font-family: 'IBM Plex Mono', monospace;
 }
@@ -78,7 +78,6 @@ margin-top: 20px;
 .main-info{
   display:flex;
   justify-content: center;
-  border: 2px solid purple;
   margin:2px;
   font-size: 10px;
   width: 90%;

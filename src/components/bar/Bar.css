@@ -68,7 +68,6 @@
 .bar-container{
   display:flex;
   justify-content: space-around;
-  border: 2px solid orange;
   color: white;
   width: 90%;
   margin-left:auto;
