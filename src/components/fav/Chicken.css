@@ -1,3 +1,63 @@
-.chicken2{
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
+
+.chicken-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid red;
   color: white;
+}
+
+.animal-label {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 30px;
+  
+}
+
+.animal-img {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  height: 450px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom-container{
+  display:flex; 
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 60%;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+
+.animal-time{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 20px;
+}
+
+.animal-source{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 20px;
+}
+
+.animal-link{
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 20px;
+  margin-top: 20px;
 }
