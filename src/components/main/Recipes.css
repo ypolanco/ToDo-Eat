@@ -46,14 +46,15 @@
     font-size: 40px;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding: 5px;
+    padding-left: 40px;
+    border: 2px solid orange;
   }
   
   .img{
     display: flex;
     justify-content: center;
     padding: 10px;
-    height: 450px;
+    height: 350px;
     width: 70%;
     border-radius: 10px;
     margin-left: auto;

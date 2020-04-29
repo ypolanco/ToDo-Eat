@@ -49,21 +49,18 @@
   }
 
   .bar-container h5{
-    font-size:30px;
+    font-size:20px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
   
   
-  
   .primary {
-    color: red;
     background-color: red;
   }
   
   .primary2 {
-    color: green;
-    background-color: yellow;
+    background-color: white;
   }
   
   }
