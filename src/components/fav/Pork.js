@@ -28,17 +28,17 @@ export default function Pork() {
     <div>
       <h4 className="favorite"> Meals to Inspire</h4>
       {recipes.map((recipe) => (
-        <div className="animal-container">
-          <p className="animal-label">{recipe.recipe.label}</p>
-          <img src={recipe.recipe.image} alt="" className="animal-img" />
-          <div className="bottom-container">
-            <p className="animal-time">Time: {recipe.recipe.totalTime}</p>
-            <p className="animal-source">Source: {recipe.recipe.source}</p>
-            <a href={recipe.recipe.shareAs} className="animal-link">
-              Full Recipe
-            </a>
-          </div>
-        </div>
+       <div className="animal-container" key="pork-container">
+       <p className="animal-label" key="pork-label">{recipe.recipe.label}</p>
+       <img src={recipe.recipe.image} alt="" className="animal-img"  key="pork-img"/>
+       <div className="bottom-container">
+         <p className="animal-time" key="pork-time">Time: {recipe.recipe.totalTime}</p>
+         <p className="animal-source" key="pork source">Source: {recipe.recipe.source}</p>
+         <a href={recipe.recipe.shareAs} className="animal-link" key="pork-link">
+           Full Recipe
+         </a>
+       </div>
+     </div>
       ))}
     </div>
   );

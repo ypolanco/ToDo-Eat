@@ -3,10 +3,8 @@ import symbol from "./symbol.png"
 import { Link,} from "react-router-dom";
 import "./Nav.css";
 import "./Nav.stories";
-// import MyLink from "./MyLink";
 
 export default function Nav(props) {
-  console.log("HERE HERE", props);
 
   return (
     <div>

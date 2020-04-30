@@ -11,21 +11,18 @@ import Beef from "./components/fav/Beef";
 import Pork from "./components/fav/Pork";
 import Fish from "./components/fav/Fish";
 import Veg from "./components/fav/Veg";
-import Button from './components/button/Button'
+import Button from "./components/button/Button";
 
 function App(props) {
   const [recipes, recipesUpdate] = useState([]);
   const [input, inputSearch] = useState("");
   const [search, searchUrl] = useState("pizza");
 
-  console.log(input);
-  console.log(search);
 
   const APP_ID = "483b09fc";
   const APP_KEY = "c041093c46744d0bfbbb6595e6ff606b";
 
   const url = `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=30`;
-  // console.log(recipes);
 
   useEffect(() => {
     // randomQuote();
@@ -35,7 +32,6 @@ function App(props) {
     const response = await axios(url);
     const data = response.data.hits;
     recipesUpdate(data);
-    console.log(data);
   }
 
   const updateInput = (e) => {
@@ -51,11 +47,11 @@ function App(props) {
   };
 
   return (
-    <div className="container">
-      <div className="nav">
+    <div className="container" key="mainContainer">
+      <div className="nav" key="navigation-bar">
         <Nav search={search} />
         <Route exact path="/">
-          <form onSubmit={searchItem} className="form">
+          <form onSubmit={searchItem} className="form" key="searched">
             <input
               type="text"
               value={input}
@@ -68,21 +64,23 @@ function App(props) {
             </button>
           </form>
           <Button />
-          <main className="wrapper">
-            <div className="within-wrapper">
+          <main className="wrapper" key="main">
+            <div className="within-wrapper" key="button-frame">
               {recipes.map((recipe) => (
-                <div>
+                <div key="recipe-main-div">
                   <Recipes
                     title={recipe.recipe.label}
                     img={recipe.recipe.image}
+                    key="recipe-images"
                   ></Recipes>
                   <Bar
                     calories={recipe.recipe.calories}
                     label="Like"
                     time={recipe.recipe.totalTime}
                     type="primary"
+                    key="labels"
                   ></Bar>
-                  <Info recipe={recipe.recipe} />
+                  <Info recipe={recipe.recipe} key="recipe-app-main" />
                 </div>
               ))}
             </div>
@@ -104,7 +102,6 @@ function App(props) {
         <Route exact path="/Veg/">
           <Veg />
         </Route>
-        
       </div>
     </div>
   );

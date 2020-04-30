@@ -12,9 +12,9 @@ export default function Chicken() {
   // console.log(recipes);
 
   useEffect(() => {
-    randomQuote();
+    // randomQuote();
   }, []);
-  
+
   async function randomQuote() {
     const response = await axios(url);
     const data = response.data.hits;
@@ -28,25 +28,31 @@ export default function Chicken() {
     <div>
       <h4 className="favorite"> Meals to Inspire</h4>
       {recipes.map((recipe) => (
-        <div className="animal-container">
-          <p className="animal-label">{recipe.recipe.label}</p>
-          <img src={recipe.recipe.image} alt="" className="animal-img" />
+        <div className="animal-container" key="chicken-container">
+          <p className="animal-label" key="chicken-label">
+            {recipe.recipe.label}
+          </p>
+          <img
+            src={recipe.recipe.image}
+            alt=""
+            className="animal-img"
+            key="chicken-img"
+          />
           <div className="bottom-container">
-            <p className="animal-time">Time: {recipe.recipe.totalTime}</p>
-            <p className="animal-source">Source: {recipe.recipe.source}</p>
-            <a href={recipe.recipe.shareAs} className="animal-link">
+            <p className="animal-time" key="chicken-time">
+              Time: {recipe.recipe.totalTime}
+            </p>
+            <p className="animal-source" key="chicken source">
+              Source: {recipe.recipe.source}
+            </p>
+            <a
+              href={recipe.recipe.shareAs}
+              className="animal-link"
+              key="chicken-link"
+            >
               Full Recipe
             </a>
           </div>
-
-          {/* source: "Serious Eats" */}
-          {/* shareAs: "http://www.edamam.com/recipe/chicken-vesuvio-b79327d05b8e5b838ad6cfd9576b30b6/chicken" */}
-          {/*<Bar
-                time={recipe.recipe.totalTime}
-                type="primary"
-              ></Bar>
-              <Info recipe={recipe.recipe} />
-            </div> */}
         </div>
       ))}
     </div>

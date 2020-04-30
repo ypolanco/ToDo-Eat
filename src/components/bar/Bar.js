@@ -6,7 +6,6 @@ export default function Bar({ calories, time}) {
   const [red, isRed] = useState(false);
   const [likes, likesUpdate] = useState(0);
 
-  console.log(red, likes);
 
   const flipped = e => { 
     e.preventDefault()
