@@ -36,8 +36,6 @@
   margin-left: auto;
   margin-right: auto;
   /* border: 2px solid yellow; */
-
-  
 }
 
 
@@ -57,7 +55,6 @@
     font-size: 40px;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding-left: 40px;
     /* border: 2px solid orange; */
   }
   
@@ -72,6 +69,49 @@
     margin-right: auto;
     /* border: 2px solid yellow; */
   }
+  
+  }
+
+  @media screen and (max-width: 600px){
+    .bulk-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      /* border: 2px solid red; */
+    }
+    
+    .title {
+      display: flex;
+      justify-content: center;
+      color: white;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 25px;
+    }
+    
+    .title:before{
+      content: "[";
+      color: #D83F87; 
+      padding-right: 10px; 
+    }
+    
+    .title:after{
+      content: "]";
+      color: #D83F87;
+      padding-left: 10px; 
+    }
+    
+    .img{
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      height: 250px;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+      /* border: 2px solid yellow; */
+    
+      
+    }
   
   }
 

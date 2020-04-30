@@ -74,6 +74,37 @@ margin-top: 20px;
   
   }
 
+  @media screen and (max-width: 600px){
+    .info-container{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      /* border: 2px solid white; */
+      color: white;
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    
+    .main-info{
+      display:flex;
+      justify-content: center;
+      /* border: 2px solid purple; */
+      margin:2px;
+      font-size: 10px;
+      width: 100%;
+      margin-left:auto;
+      margin-right:auto;
+    }
+    .ingredients{
+      display: flex; 
+      justify-content: center;
+      margin-top: 10px; 
+      margin-bottom: 5px;
+      font-size: 20px;
+    }
+
+
+  }
+
 
 @media screen and (max-width: 375px) {
 
