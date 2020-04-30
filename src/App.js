@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Route } from "react-router-dom";
 import axios from "axios";
-import Recipes from "./components/main/Recipes.js";
+import Recipes from "./components/information/main/Recipes.js";
 import Nav from "./components/navigation/Nav";
 import Bar from "./components/bar/Bar";
 import Info from "./components/information/Info";
@@ -27,7 +27,7 @@ function App(props) {
   // console.log(recipes);
 
   useEffect(() => {
-    // randomQuote();
+    randomQuote();
   }, [search]);
 
   async function randomQuote() {

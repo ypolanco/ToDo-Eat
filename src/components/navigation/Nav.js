@@ -1,6 +1,6 @@
 import React from "react";
-import symbol from "../navigation/symbol.png";
-import { Link, Route } from "react-router-dom";
+import symbol from "./symbol.png"
+import { Link,} from "react-router-dom";
 import "./Nav.css";
 import "./Nav.stories";
 // import MyLink from "./MyLink";

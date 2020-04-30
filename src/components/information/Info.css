@@ -31,6 +31,17 @@ font-size: 25px;
 margin-top: 20px;
 }
 
+.ingredients:before{
+  content: "[";
+  color: #E98074;
+  padding-right: 10px;
+}
+
+.ingredients:after{
+  content: "]";
+  color: #E98074;
+  padding-left: 10px;
+}
 
 @media screen and (max-width: 1024px) {
 

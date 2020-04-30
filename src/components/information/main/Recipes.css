@@ -12,8 +12,19 @@
   justify-content: center;
   color: white;
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 30px;
-  
+  font-size: 30px; 
+}
+
+.title:before{
+  content: "[";
+  color: #D83F87; 
+  padding-right: 10px; 
+}
+
+.title:after{
+  content: "]";
+  color: #D83F87;
+  padding-left: 10px; 
 }
 
 .img{

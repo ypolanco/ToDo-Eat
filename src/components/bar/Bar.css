@@ -3,7 +3,7 @@
 .bar-container{
   display:flex;
   justify-content: space-around;
-  border: 2px solid orange;
+  border: 2px solid #44318D;
   color: white;
   width: 60%;
   margin-left:auto;
@@ -36,7 +36,7 @@
   .bar-container{
     display:flex;
     justify-content: space-around;
-    border: 2px solid orange;
+    border: 2px solid #44318D;
     color: white;
     width: 80%;
     margin-left:auto;
