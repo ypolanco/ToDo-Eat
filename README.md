@@ -1,12 +1,4 @@
 
-## Project Planning
-
-> The Project Planning section should be completed for your project pitch with instructors.
->
-> To ensure correct Markdown, I recommend cloning this wiki and copy/pasting the raw template code.
-
-<br>
-
 ### Overview
 
 _**ToDO: EAT** ToDo:Eat, is a Recipe book that mimics the usability of several major apps that I love and admire. 
