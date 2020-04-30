@@ -28,7 +28,7 @@ function App(props) {
   // console.log(recipes);
 
   useEffect(() => {
-    randomQuote();
+    // randomQuote();
   }, [search]);
 
   async function randomQuote() {
@@ -54,9 +54,6 @@ function App(props) {
     <div className="container">
       <div className="nav">
         <Nav search={search} />
-        <Route path="/">
-          <Button />
-          </Route>
         <Route exact path="/">
           <form onSubmit={searchItem} className="form">
             <input
@@ -70,6 +67,7 @@ function App(props) {
               Search
             </button>
           </form>
+          <Button />
           <main className="wrapper">
             <div className="within-wrapper">
               {recipes.map((recipe) => (
