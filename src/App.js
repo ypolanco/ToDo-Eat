@@ -25,7 +25,7 @@ function App(props) {
   const url = `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=30`;
 
   useEffect(() => {
-    // randomQuote();
+    randomQuote();
   }, [search]);
 
   async function randomQuote() {
