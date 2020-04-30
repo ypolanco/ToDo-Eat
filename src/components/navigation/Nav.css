@@ -63,7 +63,7 @@
 @media screen and (max-width: 1024px) {
   .navigation {
     display: flex;
-    background-color: #e98074;
+    background-color: #2a1b3d;
     /* border: 2px solid red; */
     font-family: "IBM Plex Mono", monospace;
   }
@@ -161,7 +161,7 @@
 @media screen and (max-width: 375px) {
   .navigation {
     display: flex;
-    background-color: #e98074;
+    background-color: #2a1b3d;
     /* border: 2px solid red; */
   }
 

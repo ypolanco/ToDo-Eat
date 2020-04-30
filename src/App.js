@@ -11,6 +11,7 @@ import Beef from "./components/fav/Beef";
 import Pork from "./components/fav/Pork";
 import Fish from "./components/fav/Fish";
 import Veg from "./components/fav/Veg";
+import Button from './components/button/Button'
 
 function App(props) {
   const [recipes, recipesUpdate] = useState([]);
@@ -52,7 +53,10 @@ function App(props) {
   return (
     <div className="container">
       <div className="nav">
-      <Nav search={search}/>
+        <Nav search={search} />
+        <Route path="/">
+          <Button />
+          </Route>
         <Route exact path="/">
           <form onSubmit={searchItem} className="form">
             <input

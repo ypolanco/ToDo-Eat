@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
-.bulk-container{
+.bulk-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,23 +11,23 @@
   display: flex;
   justify-content: center;
   color: white;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 30px; 
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 30px;
 }
 
-.title:before{
+.title:before {
   content: "[";
-  color: #D83F87; 
-  padding-right: 10px; 
+  color: #d83f87;
+  padding-right: 10px;
 }
 
-.title:after{
+.title:after {
   content: "]";
-  color: #D83F87;
-  padding-left: 10px; 
+  color: #d83f87;
+  padding-left: 10px;
 }
 
-.img{
+.img {
   display: flex;
   justify-content: center;
   padding: 10px;
@@ -38,27 +38,26 @@
   /* border: 2px solid yellow; */
 }
 
-
 @media screen and (max-width: 1024px) {
-  .bulk-container{
+  .bulk-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* border: 2px solid red; */
   }
-  
+
   .title {
     display: flex;
     justify-content: center;
     color: white;
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 40px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 25px;
     margin-top: 5px;
     margin-bottom: 5px;
     /* border: 2px solid orange; */
   }
-  
-  .img{
+
+  .img {
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -67,81 +66,74 @@
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .bulk-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 17px;
+  }
+
+  .title:before {
+    content: "[";
+    color: #d83f87;
+    padding-right: 10px;
+  }
+
+  .title:after {
+    content: "]";
+    color: #d83f87;
+    padding-left: 10px;
+  }
+
+  .img {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: 250px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     /* border: 2px solid yellow; */
   }
-  
-  }
-
-  @media screen and (max-width: 600px){
-    .bulk-container{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      /* border: 2px solid red; */
-    }
-    
-    .title {
-      display: flex;
-      justify-content: center;
-      color: white;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 25px;
-    }
-    
-    .title:before{
-      content: "[";
-      color: #D83F87; 
-      padding-right: 10px; 
-    }
-    
-    .title:after{
-      content: "]";
-      color: #D83F87;
-      padding-left: 10px; 
-    }
-    
-    .img{
-      display: flex;
-      justify-content: center;
-      padding: 10px;
-      height: 250px;
-      width: 50%;
-      margin-left: auto;
-      margin-right: auto;
-      /* border: 2px solid yellow; */
-    
-      
-    }
-  
-  }
+}
 
 @media screen and (max-width: 375px) {
-.bulk-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* border: 2px solid red; */
-}
+  .bulk-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
 
-.title {
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 15px;
-}
+  .title {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 15px;
+  }
 
-.img{
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  height: 150px;
-  width: 70%;
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  /* border: 2px solid yellow; */
-  
-}
-
+  .img {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: 150px;
+    width: 70%;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 2px solid yellow; */
+  }
 }

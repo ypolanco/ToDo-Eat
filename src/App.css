@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
-.container {
+.wrapper {
+  display: flex;
   background-color: black;
   /* border: 2px solid green; */
-  width: 100%;
+  align-items: stretch;
 }
 
 .wrapper {
-  width: 90%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   /* border: 2px solid pink; */
   margin-left: auto;
   margin-right: auto;
@@ -24,11 +27,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+background-color: black;
   /* border: 2px solid red; */
-}
-
-.submit {
-  background-color: red;
 }
 
 .story-input {
@@ -111,6 +111,13 @@
   .container {
     background-color: black;
     /* border: 2px solid green; */
+  }
+
+  .wrapper {
+    width: 90%;
+    /* border: 2px solid pink; */
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .within-wrapper {
