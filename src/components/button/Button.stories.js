@@ -4,6 +4,6 @@ import Button from "./Button"
 
 
 
-storiesOf("Links", module)
-  .add('Chicken Link', () =><Button className="back-top" type="button" />
+storiesOf("Button", module)
+  .add('Back Up', () =><Button className="back-top" type="button" />
 )

@@ -22,13 +22,11 @@ function App(props) {
   const APP_ID = "483b09fc";
   const APP_KEY = "c041093c46744d0bfbbb6595e6ff606b";
 
-  //waits for input before searching. 
-
   const url = `https://api.edamam.com/search?q=${search}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=30`;
 
   useEffect(() => {
     randomQuote();
-  }, [search]); //will only refresh when Search is updated
+  }, [search]);
 
   async function randomQuote() {
     const response = await axios(url);
@@ -51,9 +49,8 @@ function App(props) {
   return (
     <div className="container" key="mainContainer">
       <div className="nav" key="navigation-bar">
-        <Nav search={search} key="nav-main" /> 
-        {/* Route below only shows up in the hope page with all other elements */}
-        <Route exact path="/" key="path-home">
+        <Nav search={search} />
+        <Route exact path="/">
           <form onSubmit={searchItem} className="form" key="searched">
             <input
               type="text"
@@ -67,14 +64,14 @@ function App(props) {
             </button>
           </form>
           <Button />
-          <main className="wrapper" key="main-unique">
-            <div className="within-wrapper" key="button-frame-unique">
+          <main className="wrapper" key="main">
+            <div className="within-wrapper" key="button-frame">
               {recipes.map((recipe) => (
-                <div key="recipe-main-div-unique">
+                <div key="recipe-main-div">
                   <Recipes
                     title={recipe.recipe.label}
                     img={recipe.recipe.image}
-                    key="recipe-images-main"
+                    key="recipe-images"
                   ></Recipes>
                   <Bar
                     calories={recipe.recipe.calories}
@@ -88,8 +85,8 @@ function App(props) {
               ))}
             </div>
           </main>
-          {/* All routes to new component that include their own api pull */}
         </Route>
+
         <Route exact path="/Chicken/">
           <Chicken />
         </Route>
