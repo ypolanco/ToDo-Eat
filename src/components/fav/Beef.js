@@ -12,7 +12,7 @@ export default function Beef() {
   // console.log(recipes);
 
   useEffect(() => {
-    // randomQuote(); 
+    randomQuote(); 
   }, []);
 
   async function randomQuote() {

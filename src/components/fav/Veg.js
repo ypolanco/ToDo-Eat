@@ -12,7 +12,7 @@ export default function Veg() {
   // console.log(recipes);
 
   useEffect(() => {
-    // randomQuote();
+    randomQuote();
   }, []);
 
   async function randomQuote() {
