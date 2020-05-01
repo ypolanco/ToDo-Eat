@@ -9,7 +9,6 @@ export default function Pork() {
   const APP_KEY = "c041093c46744d0bfbbb6595e6ff606b";
 
   const url = `https://api.edamam.com/search?q=pork&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=10`;
-  // console.log(recipes);
 
   useEffect(() => {
     randomQuote();
