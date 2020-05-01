@@ -49,8 +49,8 @@ function App(props) {
   return (
     <div className="container" key="mainContainer">
       <div className="nav" key="navigation-bar">
-        <Nav search={search} />
-        <Route exact path="/">
+        <Nav search={search}  key="nav-main"/>
+        <Route exact path="/" key="path-home">
           <form onSubmit={searchItem} className="form" key="searched">
             <input
               type="text"
@@ -64,14 +64,14 @@ function App(props) {
             </button>
           </form>
           <Button />
-          <main className="wrapper" key="main">
-            <div className="within-wrapper" key="button-frame">
+          <main className="wrapper" key="main-unique">
+            <div className="within-wrapper" key="button-frame-unique">
               {recipes.map((recipe) => (
-                <div key="recipe-main-div">
+                <div key="recipe-main-div-unique">
                   <Recipes
                     title={recipe.recipe.label}
                     img={recipe.recipe.image}
-                    key="recipe-images"
+                    key="recipe-images-main"
                   ></Recipes>
                   <Bar
                     calories={recipe.recipe.calories}
@@ -86,7 +86,6 @@ function App(props) {
             </div>
           </main>
         </Route>
-
         <Route exact path="/Chicken/">
           <Chicken />
         </Route>

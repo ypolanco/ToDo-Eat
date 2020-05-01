@@ -28,19 +28,33 @@ export default function Veg() {
     <div>
       <h4 className="favorite"> Meals to Inspire</h4>
       {recipes.map((recipe) => (
-       <div className="animal-container" key="veg-container">
-       <p className="animal-label" key="veg-label">{recipe.recipe.label}</p>
-       <img src={recipe.recipe.image} alt="" className="animal-img"  key="veg-img"/>
-       <div className="bottom-container">
-         <p className="animal-time" key="veg-time">Time: {recipe.recipe.totalTime}</p>
-         <p className="animal-source" key="veg source">Source: {recipe.recipe.source}</p>
-         <a href={recipe.recipe.shareAs} className="animal-link" key="veg-link">
-           Full Recipe
-         </a>
-       </div>
-     </div>
+        <div className="animal-container" key="veg-container">
+          <p className="animal-label" key="veg-label">
+            {recipe.recipe.label}
+          </p>
+          <img
+            src={recipe.recipe.image}
+            alt=""
+            className="animal-img"
+            key="veg-img"
+          />
+          <div className="bottom-container">
+            <p className="animal-time" key="veg-time">
+              Time: {recipe.recipe.totalTime}
+            </p>
+            <p className="animal-source" key="veg source">
+              Source: {recipe.recipe.source}
+            </p>
+            <a
+              href={recipe.recipe.shareAs}
+              className="animal-link"
+              key="veg-link"
+            >
+              Full Recipe
+            </a>
+          </div>
+        </div>
       ))}
     </div>
   );
 }
-

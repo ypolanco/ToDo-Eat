@@ -12,7 +12,7 @@ export default function Chicken() {
   // console.log(recipes);
 
   useEffect(() => {
-    // randomQuote();
+    randomQuote();
   }, []);
 
   async function randomQuote() {

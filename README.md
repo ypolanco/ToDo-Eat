@@ -1,4 +1,6 @@
 
+![GIF ON THE MOON]("https://gph.is/29lNuJR")
+
 ### Overview
 
 _**ToDO: EAT** ToDo:Eat, is a Recipe book that mimics the usability of several major apps that I love and admire. 
@@ -117,19 +119,19 @@ src
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Nav Bar         |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
-| Title/Img           |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
-| Bar                 |    H     |     6 hrs      |     0 hrs     |    0 hrs    |
-| Bar functionality   |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
-| Ingredients         |    H     |     2 hrs      |     0 hrs     |    0 hrs    |
-| Prep                |    H     |     2 hrs      |     0 hrs     |    0 hrs    |
-| Footer              |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
-| WireFrame           |    H     |     4 hrs      |     0 hrs     |    0 hrs    |
-| Design              |    H     |     3 hrs      |     0 hrs     |    0 hrs    |
-| Css Pagination      |    M     |     4 hrs      |     0 hrs     |    0 hrs    |
-| Debugging           |    M     |     7 hrs      |     0 hrs     |    0 hrs    |
+| Add Nav Bar         |    H     |     3 hrs      |     4 hrs     |    4 hrs    |
+| Title/Img           |    H     |     3 hrs      |     2 hrs     |    2 hrs    |
+| Bar                 |    H     |     6 hrs      |     3 hrs     |    3 hrs    |
+| Bar functionality   |    H     |     3 hrs      |     6 hrs     |    6 hrs    |
+| Ingredients         |    H     |     2 hrs      |     2 hrs     |    2 hrs    |
+| Prep                |    H     |     2 hrs      |     2 hrs     |    2 hrs    |
+| Footer              |    H     |     3 hrs      |     1 hrs     |    1 hrs    |
+| WireFrame           |    H     |     4 hrs      |     5 hrs     |    5 hrs    |
+| Design              |    H     |     3 hrs      |     4 hrs     |    4 hrs    |
+| Css Pagination      |    M     |     4 hrs      |     2 hrs     |    2 hrs    |
+| Debugging           |    M     |     7 hrs      |     9 hrs     |    9 hrs    |
 
-| TOTAL               |          |     40 hrs      |     0 hrs     |     TBD     |
+| TOTAL               |          |     40 hrs      |     40 hrs     |    40 hrs |
 
 <br>
 
