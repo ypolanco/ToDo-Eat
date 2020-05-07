@@ -1,5 +1,5 @@
 
-[Deployed]("https://todoeat.netlify.app/")
+("https://todoeat.netlify.app/")
 
 ### Overview
 
